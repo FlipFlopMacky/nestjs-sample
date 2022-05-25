@@ -14,12 +14,14 @@ module.exports = {
   entities:
       process.env.NODE_ENV === 'test'
           ? ['src/entities/**/*.ts']
-          : ['dist/entities/**/*.js'],
-  migrations: ['dist/migration/**/*.js'],
-  subscribers: ['dist/subscriber/**/*.js'],
+          : ['src/entities/**/*.ts'],
+  migrations: ['src/migration/**/*.ts'],
+  subscribers: ['src/subscriber/**/*.ts'],
   cli: {
       entitiesDir: 'src/entities',
       migrationsDir: 'src/migration',
       subscribersDir: 'src/subscriber',
   },
+  seeds: ['src/seeds/**/*{.ts,.js}'],
+  factories: ['src/factories/**/*{.ts,.js}'],
 };

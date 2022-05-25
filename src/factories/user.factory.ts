@@ -1,7 +1,8 @@
+// https://github.com/w3tecch/typeorm-seeding
 import { define } from 'typeorm-seeding';
-import * as Faker from 'faker/locale/ja';
-
-import { User } from './entities/User';
+// 使えないので、fakerの代用を使うようにする
+// import Faker from 'faker';
+import { User } from '../../src/entities/user.entity';
 
 define(User, (faker: typeof Faker): User => {
     const user = new User();
